@@ -1,0 +1,878 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #141416;
+  border-radius: 6px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+html {
+  background-color: #F9F9F9;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #F9F9F9;
+  margin: 2% 0% 6% 0%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+header .header__navigation {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+}
+header .header__navigation .header__logo {
+  display: flex;
+  justify-content: center;
+}
+header .header__navigation .header__links {
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+}
+header .header__navigation .header__links a {
+  text-decoration: none;
+  color: #606060;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.2rem;
+  font-family: "Inter", sans-serif;
+  transition: 0.3s;
+  position: relative;
+}
+header .header__navigation .header__links ::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #141416;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  transition: 0.3s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: scaleX(0);
+}
+header .header__navigation .header__links :hover::before,
+header .header__navigation .header__links :focus::before {
+  transform: scaleX(100%);
+}
+header .header__navigation .header__links :hover,
+header .header__navigation .header__links :focus {
+  scale: 1.02;
+  opacity: 0.8;
+}
+header .header__search {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header .header__search .header__input input {
+  font-size: 1.1rem;
+  width: 400px;
+  position: relative;
+  border-radius: 10px;
+  line-height: 47px;
+  background-color: rgba(213, 213, 213, 0.561);
+  border: none;
+  transition: 0.4s;
+}
+header .header__search .header__input :hover,
+header .header__search .header__input :focus {
+  transform: scaleX(1.1);
+}
+header .header__search .header__input ::-moz-placeholder {
+  color: #C2C3CB;
+  padding: 0px 5%;
+  font-size: 1.1rem;
+}
+header .header__search .header__input ::placeholder {
+  color: #C2C3CB;
+  padding: 0px 5%;
+  font-size: 1.1rem;
+}
+header .header__search .header__button {
+  background-color: #141416;
+  color: #fff;
+  border-radius: 10px;
+}
+header .header__search .header__button button {
+  background-color: #141416;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 16px 24px;
+  font-size: 1.2rem;
+  transition: 0.2s;
+}
+header .header__search .header__button :hover,
+header .header__search .header__button :focus {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+main {
+  background-color: #F9F9F9;
+}
+main .discoverSection {
+  margin-bottom: 15%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main .discoverSection .discoverSection__description {
+  margin-left: 11%;
+}
+main .discoverSection .discoverSection__description .discoverSection__title {
+  color: #141416;
+  font-family: "Poppins", sans-serif;
+  font-size: 3.7rem;
+}
+main .discoverSection .discoverSection__description .discoverSection__text {
+  font-family: "Inter", sans-serif;
+  width: 80%;
+  color: #606060;
+}
+main .discoverSection .discoverSection__description .discoverSection__text p {
+  font-size: 1.4rem;
+}
+main .discoverSection .discoverSection__description .discoverSection__text p samp {
+  font-weight: 900;
+  font-family: "Inter", sans-serif;
+}
+main .discoverSection .discoverSection__description .discoverSection__buttons {
+  display: flex;
+}
+main .discoverSection .discoverSection__description .discoverSection__buttons button {
+  margin: 15% 2% 4% 0%;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  border-radius: 7px;
+  font-weight: 500;
+  padding: 2% 4%;
+  transition: 0.4s;
+}
+main .discoverSection .discoverSection__description .discoverSection__buttons button:hover {
+  scale: 1.08;
+  cursor: pointer;
+}
+main .discoverSection .discoverSection__description .discoverSection__buttons :nth-child(1) {
+  background-color: #141416;
+  color: #fff;
+  transition: 340ms;
+}
+main .discoverSection .discoverSection__description .discoverSection__buttons :nth-child(2) {
+  background-color: transparent;
+  transition: 340ms;
+}
+main .discoverSection .discoverSection__description .discoverSection__info--wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+main .discoverSection .discoverSection__description .discoverSection__info--wrapper .discoverSection__info {
+  font-family: "Poppins", sans-serif;
+}
+main .discoverSection .discoverSection__description .discoverSection__info--wrapper .discoverSection__info b {
+  color: #141416;
+  font-weight: 600;
+  font-size: 2.3rem;
+}
+main .discoverSection .discoverSection__description .discoverSection__info--wrapper .discoverSection__info p {
+  color: #606060;
+  font-size: 0.8rem;
+}
+main .discoverSection .discoverSection__images {
+  position: relative;
+}
+main .discoverSection .discoverSection__images .discoverSection__image2 {
+  position: absolute;
+  right: 0;
+  bottom: -22px;
+  z-index: 1;
+}
+main .discoverSection .discoverSection__images .discoverSection__image3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+main .discoverSection .discoverSection__images .discoverSection__controls {
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 12px 55px 100px 0px rgb(80, 80, 80);
+  width: 10%;
+}
+main .discoverSection .discoverSection__images .discoverSection__controls button {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  transition: 0.4s;
+  border: 0;
+  padding: 19% 28%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+main .discoverSection .discoverSection__images .discoverSection__controls button:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+main .weeklyTopSection {
+  position: relative;
+  margin-bottom: 20%;
+}
+main .weeklyTopSection .weeklyTopSection__title {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: #c5c5c5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+}
+main .weeklyTopSection .weeklyTopSection__sliderWrapper {
+  overflow: hidden;
+}
+main .weeklyTopSection .weeklyTopSection__sliderWrapper .weeklyTopSection__sliderCards {
+  background-color: #e5e5e5;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 9%;
+  justify-content: space-evenly;
+}
+main .weeklyTopSection .weeklyTopSection__sliderWrapper .weeklyTopSection__sliderCards .weeklyTopSection__card {
+  margin: 0rem 3rem 0rem 0rem;
+  background-color: #fff;
+  border-radius: 7px;
+  width: -moz-max-content;
+  width: max-content;
+}
+main .weeklyTopSection .weeklyTopSection__sliderWrapper .weeklyTopSection__sliderCards .weeklyTopSection__card .weeklyTopSection__cardImage {
+  position: relative;
+  padding: 0.7rem 0.7rem 0rem 0.7rem;
+}
+main .weeklyTopSection .weeklyTopSection__sliderWrapper .weeklyTopSection__sliderCards .weeklyTopSection__card .weeklyTopSection__cardImage img {
+  border-radius: 1rem;
+}
+main .weeklyTopSection .weeklyTopSection__sliderWrapper .weeklyTopSection__sliderCards .weeklyTopSection__card .weeklyTopSection__cardImage .weeklyTopSection__time {
+  position: absolute;
+  right: 0.7rem;
+  top: 0.8rem;
+  background-color: #807b7d;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 8px;
+  padding: 0.5rem 1.4rem;
+}
+main .weeklyTopSection .weeklyTopSection__sliderWrapper .weeklyTopSection__sliderCards .weeklyTopSection__card .weeklyTopSection__cardTitle b {
+  margin-left: 2rem;
+  font-size: 1.6rem;
+  color: #141416;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+main .weeklyTopSection .weeklyTopSection__sliderWrapper .weeklyTopSection__sliderCards .weeklyTopSection__card .weeklyTopSection__bottomCardSection {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1.2rem;
+}
+main .weeklyTopSection .weeklyTopSection__sliderWrapper .weeklyTopSection__sliderCards .weeklyTopSection__card .weeklyTopSection__bottomCardSection .weeklyTopSection__cardText p {
+  color: #94A3B8;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+}
+main .weeklyTopSection .weeklyTopSection__sliderWrapper .weeklyTopSection__sliderCards .weeklyTopSection__card .weeklyTopSection__bottomCardSection .weeklyTopSection__cardPrice {
+  display: flex;
+}
+main .weeklyTopSection .weeklyTopSection__sliderWrapper .weeklyTopSection__sliderCards .weeklyTopSection__card .weeklyTopSection__bottomCardSection .weeklyTopSection__cardPrice img {
+  margin: 0rem 0.2rem;
+  max-width: 100%;
+}
+main .weeklyTopSection .weeklyTopSection__sliderWrapper .weeklyTopSection__sliderCards .weeklyTopSection__card .weeklyTopSection__bottomCardSection .weeklyTopSection__cardPrice p {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #141416;
+  font-family: "Poppins", sans-serif;
+}
+main .weeklyTopSection .weeklyTopSection__sliderWrapper .weeklyTopSection__sliderCards .weeklyTopSection__card .weeklyTopSection__bottomCardSection .weeklyTopSection__card__button button {
+  padding: 0.6rem 1rem;
+  background-color: #141416;
+  transition: 0.4s;
+  border-radius: 7px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+}
+main .weeklyTopSection .weeklyTopSection__sliderWrapper .weeklyTopSection__sliderCards .weeklyTopSection__card .weeklyTopSection__bottomCardSection .weeklyTopSection__card__button button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+main .weeklyTopSection .weeklyTopSection__buttons {
+  display: flex;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  box-shadow: 12px 55px 100px 0px rgb(80, 80, 80);
+  width: 10%;
+}
+main .weeklyTopSection .weeklyTopSection__buttons button {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  transition: 0.4s;
+  border: 0;
+  padding: 10% 23%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+main .weeklyTopSection .weeklyTopSection__buttons button:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+main .weeklyTopSection .weeklyTopSection__recentViewedConatiner {
+  position: absolute;
+  border-radius: 10px;
+  right: 16.1rem;
+  bottom: -15rem;
+  background-color: #f9f9f9;
+}
+main .weeklyTopSection .weeklyTopSection__recentViewedConatiner .weeklyTopSection__recentViewedContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1.3rem;
+}
+main .weeklyTopSection .weeklyTopSection__recentViewedConatiner .weeklyTopSection__recentViewedContent :nth-child(2n) {
+  justify-self: end;
+}
+main .weeklyTopSection .weeklyTopSection__recentViewedConatiner .weeklyTopSection__recentViewedContent b {
+  color: #141416;
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+}
+main .weeklyTopSection .weeklyTopSection__recentViewedConatiner .weeklyTopSection__recentViewedContent .weeklyTopSection__customer--details {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+main .weeklyTopSection .weeklyTopSection__recentViewedConatiner .weeklyTopSection__recentViewedContent .weeklyTopSection__customer--details img {
+  border-radius: 50%;
+  -o-object-position: center;
+     object-position: center;
+}
+main .weeklyTopSection .weeklyTopSection__recentViewedConatiner .weeklyTopSection__recentViewedContent .weeklyTopSection__customer--details .weeklyTopSection__customerNames b {
+  color: #141416;
+  font-weight: 500;
+  font-size: 0.9fr;
+  font-family: "Poppins", sans-serif;
+}
+main .weeklyTopSection .weeklyTopSection__recentViewedConatiner .weeklyTopSection__recentViewedContent .weeklyTopSection__customer--details .weeklyTopSection__customerNames p {
+  color: #64748B;
+  font-weight: 300;
+  font-size: 0.5fr;
+  font-family: "Poppins", sans-serif;
+}
+main .weeklyTopSection .weeklyTopSection__recentViewedConatiner .weeklyTopSection__recentViewedContent .weeklyTopSection__customer--stocks {
+  margin: 2rem 0rem;
+}
+main .weeklyTopSection .weeklyTopSection__recentViewedConatiner .weeklyTopSection__recentViewedContent .weeklyTopSection__customer--stocks .weeklyTopSection__customer--details img {
+  border-radius: 10px;
+}
+main .weeklyTopSection .weeklyTopSection__recentViewedConatiner .weeklyTopSection__recentViewedContent .weeklyTopSection__customer--stocks .weeklyTopSection__customer--stocksAmount {
+  display: flex;
+  align-items: center;
+}
+main .weeklyTopSection .weeklyTopSection__recentViewedConatiner .weeklyTopSection__recentViewedContent .weeklyTopSection__customer--stocks .weeklyTopSection__customer--stocksAmount p {
+  color: #141416;
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+}
+main .weeklyTopSection .weeklyTopSection__recentViewedConatiner .weeklyTopSection__recentViewedContent .weeklyTopSection__customer--stocks .weeklyTopSection__customer--stocksPercent1 {
+  color: #10C352;
+}
+main .weeklyTopSection .weeklyTopSection__recentViewedConatiner .weeklyTopSection__recentViewedContent .weeklyTopSection__customer--stocks .weeklyTopSection__customer--stocksPercent2 p {
+  color: #E23333;
+}
+main .topCollectionSection {
+  padding: 20px;
+  margin-top: 13%;
+  background-color: #F9F9F9;
+}
+main .topCollectionSection .topCollectionSection__title {
+  display: flex;
+  margin-bottom: 5%;
+  justify-content: center;
+  color: #141416;
+  font-weight: 600;
+  font-size: 2.8rem;
+  font-family: "Poppins", sans-serif;
+}
+main .topCollectionSection .topCollectionSection__users .topCollectionSection__collectionContainer {
+  display: flex;
+  justify-content: space-between;
+}
+main .topCollectionSection .topCollectionSection__users .topCollectionSection__collectionContainer .topCollectionSection__info--collection {
+  width: 30%;
+}
+main .topCollectionSection .topCollectionSection__users .topCollectionSection__collectionContainer .topCollectionSection__info--collection p {
+  color: #93989A;
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+}
+main .topCollectionSection .topCollectionSection__users .topCollectionSection__collectionContainer .topCollectionSection__info {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
+main .topCollectionSection .topCollectionSection__users .topCollectionSection__collectionContainer .topCollectionSection__info p {
+  color: #93989A;
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+}
+main .topCollectionSection .topCollectionSection__users .topCollectionSection__userCard {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2%;
+  border: 2px;
+  border-color: #EBE9E9;
+  border-style: solid;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  padding-bottom: 1%;
+}
+main .topCollectionSection .topCollectionSection__users .topCollectionSection__userCard .topCollectionSection__userDetales {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+main .topCollectionSection .topCollectionSection__users .topCollectionSection__userCard .topCollectionSection__userDetales:nth-child(3) {
+  margin-right: 100%;
+}
+main .topCollectionSection .topCollectionSection__users .topCollectionSection__userCard .topCollectionSection__userDetales .userIcon {
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+main .topCollectionSection .topCollectionSection__users .topCollectionSection__userCard .topCollectionSection__userDetales .userIcon .topCollectionSection__userIcon {
+  margin-right: 2%;
+}
+main .topCollectionSection .topCollectionSection__users .topCollectionSection__userCard .topCollectionSection__userDetales .userIcon .topCollectionSection__userIcon img {
+  border-radius: 50%;
+  -o-object-position: center;
+     object-position: center;
+}
+main .topCollectionSection .topCollectionSection__users .topCollectionSection__userCard .topCollectionSection__userDetales .userIcon .topCollectionSection__userName {
+  margin-left: 1%;
+}
+main .topCollectionSection .topCollectionSection__users .topCollectionSection__userCard .topCollectionSection__userDetales .userIcon .topCollectionSection__userName p {
+  color: #141416;
+  font-weight: 500;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+}
+main .topCollectionSection .topCollectionSection__users .topCollectionSection__userCard .topCollectionSection__userDetales .userIcon .topCollectionSection__userName .topCollectionSection__userCard--paleText {
+  color: #64748B;
+  font-weight: 400;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+}
+main .topCollectionSection .topCollectionSection__users .topCollectionSection__userCard .topCollectionSection__userDetales .topCollectionSection__userInfo {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+main .topCollectionSection .topCollectionSection__users .topCollectionSection__userCard .topCollectionSection__userDetales .topCollectionSection__userInfo p {
+  display: flex;
+  align-items: center;
+  color: #141416;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+}
+main .topCollectionSection .topCollectionSection__users .topCollectionSection__userCard .topCollectionSection__userDetales .topCollectionSection__userInfo .topCollectionSection__userCard--percentText {
+  color: #10C352;
+}
+main .topCollectionSection .topCollectionSection__exploreMore {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+main .topCollectionSection .topCollectionSection__exploreMore a {
+  margin: 2% 2%;
+  text-decoration: none;
+  color: #ACADB9;
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+}
+main .topCollectionSection .topCollectionSection__exploreMore a:hover {
+  text-decoration: underline;
+}
+main .marketplaceSection {
+  margin-bottom: 6%;
+}
+main .marketplaceSection .marketplaceSection__title p {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 7%;
+  width: 100%;
+  color: #141416;
+  font-weight: 600;
+  font-size: 2.8rem;
+  font-family: "Poppins", sans-serif;
+}
+main .marketplaceSection .marketplaceSection__navigation {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 8%;
+}
+main .marketplaceSection .marketplaceSection__navigation button {
+  background-color: transparent;
+  max-width: 100%;
+  border-radius: 13px;
+  color: #141416;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  padding: 0.9rem 1.5rem;
+  margin: 0px 20px;
+  display: flex;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 0.4s;
+  align-items: center;
+}
+main .marketplaceSection .marketplaceSection__navigation button img {
+  margin-right: 6%;
+}
+main .marketplaceSection .marketplaceSection__navigation button:hover {
+  cursor: pointer;
+  scale: 1.05;
+}
+main .marketplaceSection .marketplaceSection__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0% 5%;
+}
+main .marketplaceSection .marketplaceSection__cards .marketplaceSection__card {
+  border-radius: 20px;
+  margin: 10%;
+  box-shadow: 7px 34px 100px -22px rgb(66, 68, 90);
+}
+main .marketplaceSection .marketplaceSection__cards .marketplaceSection__card .marketplaceSection__image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+main .marketplaceSection .marketplaceSection__cards .marketplaceSection__card .marketplaceSection__image img {
+  padding: 0.9rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-radius: 30px;
+  height: 270px;
+}
+main .marketplaceSection .marketplaceSection__cards .marketplaceSection__card .marketplaceSection__image p {
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.8rem;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  right: 23px;
+  top: 18px;
+  background-color: #606060;
+  padding: 10px;
+  border-radius: 10px;
+}
+main .marketplaceSection .marketplaceSection__cards .marketplaceSection__card .marketplaceSection__textBlock {
+  padding: 0.9rem;
+}
+main .marketplaceSection .marketplaceSection__cards .marketplaceSection__card .marketplaceSection__textBlock .marketplaceSection__title p {
+  color: #141416;
+  font-weight: 600;
+  font-size: 2em;
+  font-family: "Poppins", sans-serif;
+  display: block;
+}
+main .marketplaceSection .marketplaceSection__cards .marketplaceSection__card .marketplaceSection__textBlock .marketplaceSection__info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+main .marketplaceSection .marketplaceSection__cards .marketplaceSection__card .marketplaceSection__textBlock .marketplaceSection__info .marketplaceSection__curentBid {
+  color: #141416;
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+}
+main .marketplaceSection .marketplaceSection__cards .marketplaceSection__card .marketplaceSection__textBlock .marketplaceSection__info .marketplaceSection__curentBid .marketplaceSection__curentBid--title {
+  color: #94A3B8;
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+}
+main .marketplaceSection .marketplaceSection__cards .marketplaceSection__card .marketplaceSection__textBlock .marketplaceSection__info .marketplaceSection__button {
+  padding: 1rem 1.2rem;
+  background-color: #141416;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+main .marketplaceSection .marketplaceSection__cards .marketplaceSection__card .marketplaceSection__textBlock .marketplaceSection__info .marketplaceSection__button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+main .marketplaceSection .marketplaceSection__exploreMoreLink {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+main .marketplaceSection .marketplaceSection__exploreMoreLink a {
+  margin-right: 7%;
+  margin-top: 2%;
+  color: #ACADB9;
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+main .marketplaceSection .marketplaceSection__exploreMoreLink a:hover {
+  transform: scale(1.02);
+  text-decoration: underline;
+}
+main .marketplaceSection .marketplaceSection__exploreMoreLink a img {
+  opacity: 0.6;
+}
+main .unleashSection {
+  margin: 5%;
+  margin-bottom: 10%;
+  padding-top: 8%;
+  border: 2px rgba(20, 20, 22, 0.1254901961) solid;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main .unleashSection .unleashSection__info .unleashSection__title {
+  margin-bottom: 9%;
+}
+main .unleashSection .unleashSection__info .unleashSection__title p {
+  color: #C5C5C5;
+  font-weight: 700;
+  font-size: 2.8rem;
+  font-family: "Poppins", sans-serif;
+}
+main .unleashSection .unleashSection__info .unleashSection__title p samp {
+  color: #141414;
+  font-weight: 700;
+  font-size: 2.8rem;
+  font-family: "Poppins", sans-serif;
+}
+main .unleashSection .unleashSection__info .unleashSection__advantages {
+  margin-bottom: 9%;
+}
+main .unleashSection .unleashSection__info .unleashSection__advantages p {
+  padding: 1.2%;
+  display: flex;
+  align-items: center;
+  color: #12141D;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+main .unleashSection .unleashSection__info .unleashSection__advantages p::before {
+  content: url(../images/checked.png);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin-right: 1%;
+}
+main .unleashSection .unleashSection__info .unleashSection__button button {
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  padding: 19px 21px;
+  background-color: #141416;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+  border-radius: 10px;
+}
+main .unleashSection .unleashSection__info .unleashSection__button button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+main .unleashSection .unleashSection__info .unleashSection__button button svg {
+  margin-left: 10px;
+}
+main .creaateAndSellNFTSection {
+  border-radius: 20px;
+  margin: 0% 7%;
+  margin-bottom: 10%;
+  background-color: #141416;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2.7rem 8rem;
+}
+main .creaateAndSellNFTSection .creaateAndSellNFTSection__textContainer .creaateAndSellNFTSection__title p {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 2.8rem;
+  font-family: "Poppins", sans-serif;
+}
+main .creaateAndSellNFTSection .creaateAndSellNFTSection__textContainer .creaateAndSellNFTSection__subTitle {
+  margin-bottom: 10%;
+}
+main .creaateAndSellNFTSection .creaateAndSellNFTSection__textContainer .creaateAndSellNFTSection__subTitle p {
+  opacity: 0.7;
+  color: #D4D4D4;
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+}
+main .creaateAndSellNFTSection .creaateAndSellNFTSection__textContainer .creaateAndSellNFTSection__buttonsContainer button {
+  margin-right: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  color: #141416;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+  transition: 0.4s;
+}
+main .creaateAndSellNFTSection .creaateAndSellNFTSection__textContainer .creaateAndSellNFTSection__buttonsContainer button:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+main .creaateAndSellNFTSection .creaateAndSellNFTSection__textContainer .creaateAndSellNFTSection__buttonsContainer :last-child {
+  background-color: transparent;
+  border-radius: 10px;
+  border-color: #fff;
+  padding: 1.2rem 1.5rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+}
+main .creaateAndSellNFTSection .creaateAndSellNFTSection__imageContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+main .creaateAndSellNFTSection .creaateAndSellNFTSection__imageContainer img {
+  border-radius: 20px;
+  box-shadow: -1px 39px 100px -13px rgb(255, 255, 255);
+}
+
+footer {
+  padding: 6rem 5.75rem;
+  background-color: #141416;
+}
+footer .footer__contactInfo {
+  align-items: center;
+  padding-bottom: 2%;
+  border: 2px #818181 solid;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+  border-top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer__contactInfo .footer__logo {
+  width: 20%;
+}
+footer .footer__contactInfo .footer__logo a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Poppins", sans-serif;
+}
+footer .footer__contactInfo .footer__logo a img {
+  margin: 0% 5%;
+}
+footer .footer__contactInfo .footer__contacts {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+footer .footer__contactInfo .footer__contacts a {
+  margin-right: 6%;
+  text-decoration: none;
+  color: #B9B9B9;
+  font-weight: 500;
+  font-size: 1.08rem;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+footer .footer__contactInfo .footer__contacts a:hover {
+  scale: 1.05;
+  color: #d1d1d1;
+}
+footer .footer__socialMedia {
+  padding-top: 4%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer__socialMedia .footer__copyRight {
+  width: 20%;
+  color: #999999;
+  font-weight: 500;
+  font-size: 1.08rem;
+  font-family: "Poppins", sans-serif;
+}
+footer .footer__socialMedia .footer__socialMedias {
+  display: flex;
+  justify-content: end;
+  width: 80%;
+}
+footer .footer__socialMedia .footer__socialMedias a {
+  margin-right: 2%;
+  text-decoration: none;
+}/*# sourceMappingURL=styles.css.map */
